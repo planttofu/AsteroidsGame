@@ -22,5 +22,12 @@ public void setCenterY(int b) {
 public void setDirection(int c) {
   myPointDirection = c;
 }
+public double getX() {
+  return myCenterX;
+}
+
+public double getY() {
+  return myCenterY;
+}
 
 }
