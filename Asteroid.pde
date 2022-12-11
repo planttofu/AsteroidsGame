@@ -20,7 +20,6 @@ public void move() {
 }
 
 
-
 public double getX() {
   return myCenterX;
 }
