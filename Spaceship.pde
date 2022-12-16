@@ -6,6 +6,7 @@ public Spaceship() {
    myCenterX = myCenterY = 400;
    myXspeed = myYspeed = 0;
    myColor = color((int)(Math.random()*220), (int)(Math.random()*245), 260);
+   myPointDirection = 0;
   }
 public void setXspeed(int x) {
   myXspeed = x;
