@@ -26,9 +26,6 @@ public void draw() {
   for(int i = 0; i < starryNight.length; i++) {
     starryNight[i].show();
   } 
-  
-    pop.move();
-    pop.show();
     
     for(int v = 0; v < boom.size(); v++) {
       boom.get(v).show();
@@ -48,23 +45,27 @@ public void draw() {
     rock.get(j).move();
     float d = dist((float)pop.getX(), (float)pop.getY(), (float)rock.get(j).getX(), (float)rock.get(j).getY());
     if(d < 30)
-      rocks.remove(j);
+      rock.remove(j);
       j--;
-      break;
   } 
   
+ for(int v = 0; v < boom.size(); v++) {
+      boom.get(v).move();
+      boom.get(v).show();
   for(int i = 0; i < rocks.size(); i++) {
-      for(int v = 0; v < boom.size(); v++) {
-      if (dist((float)boom.get(v).getX(), (float)boom.get(v).getY(), (float)rocks.get(i).getX(), (float)rocks.get(i).getY()) < 20) {
-        boom.remove(v);  
+      if (dist((float)boom.get(v).getX(), (float)boom.get(v).getY(), (float)rocks.get(i).getX(), (float)rocks.get(i).getY()) < 20) {  
         rocks.remove(i);
-        v--;
+        boom.remove(v);
         i--;
+        v--;
         break;  
         }
   
     }
   } 
+  
+ pop.move();
+ pop.show();
 }
   
 public void keyPressed(){
