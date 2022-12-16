@@ -2,7 +2,6 @@ Star[] starryNight = new Star[500];
 Spaceship pop = new Spaceship();
 
 ArrayList <Asteroid> rocks = new ArrayList <Asteroid>() ;
-ArrayList <funkyAsteroids> rock = new ArrayList <funkyAsteroids>();
 ArrayList <Bullet> boom = new ArrayList <Bullet>();
 
 public void setup() {
@@ -14,10 +13,7 @@ public void setup() {
    for(int n = 0; n < 20; n++) {
      rocks.add(n, new Asteroid());
    }
-    
-   for(int o = 0; o < 8; o++) {
-     rock.add(o, new funkyAsteroids());
-   }
+
 }
 
 public void draw() {
@@ -27,10 +23,6 @@ public void draw() {
     starryNight[i].show();
   } 
     
-    for(int v = 0; v < boom.size(); v++) {
-      boom.get(v).show();
-      boom.get(v).move();
-    }
 
    for(int i = 0; i < rocks.size(); i++) {
     rocks.get(i).show();
@@ -40,14 +32,7 @@ public void draw() {
     if(d < 30)
       rocks.remove(i);
   } 
-    for(int j = 0; j < rock.size(); j++) {
-    rock.get(j).show();
-    rock.get(j).move();
-    float d = dist((float)pop.getX(), (float)pop.getY(), (float)rock.get(j).getX(), (float)rock.get(j).getY());
-    if(d < 30)
-      rock.remove(j);
-      j--;
-  } 
+   
   
  for(int v = 0; v < boom.size(); v++) {
       boom.get(v).move();
