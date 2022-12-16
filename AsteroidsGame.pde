@@ -68,7 +68,7 @@ public void keyPressed(){
   if(key == 'a' || key == 'A') {
     pop.accelerate(3);
   }
-  if (key == ' ') {
+  if (key == ' ' || key == 's') {
     boom.add(new Bullet(pop));
   }
 }
