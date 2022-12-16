@@ -10,7 +10,7 @@ public void setup() {
     starryNight[i] = new Star();
   }
    
-   for(int n = 0; n < 20; n++) {
+   for(int n = 0; n < 25; n++) {
      rocks.add(n, new Asteroid());
    }
 
@@ -23,18 +23,15 @@ public void draw() {
     starryNight[i].show();
   } 
     
-
    for(int i = 0; i < rocks.size(); i++) {
     rocks.get(i).show();
     rocks.get(i).move();
-
     float d = dist((float)pop.getX(), (float)pop.getY(), (float)rocks.get(i).getX(), (float)rocks.get(i).getY());
     if(d < 30)
       rocks.remove(i);
   } 
-   
-  
- for(int v = 0; v < boom.size(); v++) {
+
+for(int v = 0; v < boom.size(); v++) {
       boom.get(v).move();
       boom.get(v).show();
   for(int i = 0; i < rocks.size(); i++) {
